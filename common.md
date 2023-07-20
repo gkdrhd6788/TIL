@@ -159,6 +159,20 @@ rental_book('홍길동',3)
 # 이유: 함수만 가져오는 것임 .변경된 변수를 가져오는 건 아님. 따라서 number_of_book은 처음100값
 '''
 
+# import 문제점 해결책 0  --강사님이 알려주셨는데..이유는 모르겠음
+import book
+
+def rental_book(name,num_book):
+    book.decrease_book(num_book)
+    print('남은 책의 수:', book.number_of_book)
+    print(f'{name}님이 {num_book}권의 책을 대여하였습니다.')
+    
+rental_book('홍길동',3)
+
+
+
+
+
 # import 문제점 해결책1
 from book import number_of_book, decrease_book
 
@@ -176,6 +190,8 @@ rental_book('홍길동',3)
 남은 책의 수 97
 홍길동님이 3권의 책을 대여하였습니다.
 '''
+
+
 
 
 
