@@ -224,3 +224,20 @@ rental_book('홍길동',3)
 
 ```
 
+질문
+
+```python
+a=0
+
+def my_func():
+    global a
+    a += 1
+
+def test(a):
+    print(a)
+    my_func()
+    print(a)
+ 
+test(a) # 왜 안바뀌지??위에 increse 함수와 다르네?
+```
+
