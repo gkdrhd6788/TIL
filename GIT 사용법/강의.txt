@@ -1,0 +1,84 @@
+---
+버전 관리 방법 (old)
+1. 파일명에 날짜, 시간 기록하기
+2. 변경사항을 기록하는 파일 만들기
+3. 마지막 파일과 이전 변경사항만 남기기
+
+git 분산 버전 관리 시스템 (new) - 변경 이력 기록, 협업 도움
+	3가지 영역 
+		1. Working Directory - 작업 중인 파일이 위치
+		2. Staging Area - 1.에서 변경된 파일 중, 다음 버전에 포함시킬 파일들을 선택적 추가/제외 가능한 중간 준비 영역
+		3. (Local) Repository - 2.에서 등록된 파일들만 기록됨. 2.내용을 commit(버전 관리) 하면 3.에 저장
+			        버전 이력과 파일들이 영구적으로 저장되는 영역. 모든 버전과 변경 이력이 기록됨.
+		4. (Github) Repository 
+
+주의! git은 Home directory에서 하지 말것!
+주의! git init은 최상위에서 한번만 하면 됨. 하위 디렉토리는 깃이 관리. if 중복해서 하면 충돌날 수 있음.
+
+git code
+rm -rf .git/   - git 만든 거 삭제하기.
+git init    - 로컬 저장소 설정(초기화) , git 의 버전 관리를 시작할 디렉토리에서 진행. master가 떠야함.
+git add 파일명    - 1->2  (A표시) if git add .하면 현재 폴더에 있는 모든 걸 add
+git commit -m "설명"    -  2 ->3  (message의 m)
+git push -u 별칭(ex. origin) master 	- 3 ->4 (orgin별칭의 원격저장소에 로컬master브랜치를 push)
+	두번째부터는 git push만 하면 됨
+git pull origin master (위와 동일)    (or clone-3이 없을 때 4를 복제하는것. git init도 불요)  - 4 ->3
+	git clone https주소
+git ignore
+git status	    - 2.의 상태를 확인
+git log	-commit 정보확인
+git log --oneline  한 줄로 보여줌(위에 있는게 최신)
+	7자리 hash 값은 ID
+
+git remote add 원격저장소 별칭(ex.origin) 원격저장소 주소      - 3.에  4.주소 추가
+
+git remote       - 현재 프로젝트에 등록된 리모트 저장소
+git remote -v	-추가된 원격 저장소 목록 확인
+git remote rm 원격저장소이름     - 현재 로컬 저장소에 등록된 원격 저장소 삭제
+esc 
+I
+:입력하면 밑으로 내려감
+W 저장
+Q 끝내기
+
+
+
+---
+git bash에서
+
+python sample.py라고 하면 '현재위치'에서 파일찾아서 실행함.
+	python ../sample.py 현재 위치에 파일이 없다면 위치를 명확히 알려줘야함.
+	절대경로,상대경로 불문
+	장고에서 실행될 때 많이 뜨는 에러 원인.
+
+start . 현재위치에서   탐색기 화면 뜸
+
+. 현재 디렉토리
+.. 현재의 상위 디렉토리 ex. cd ..
+	cd ../../.. 도 가능
+
+~  유저의 Home Directorycd
+
+pwd 현재의 디렉토리 보여줌
+
+ctrl+L 배쉬 깔끔하게 지우기
+
+ls
+ls -a   all
+ls -al  세부정보
+ls 폴더명/ 폴더 안의 
+
+touch '파일'만들기
+	touch test.txt test2.txt  여러개의 '파일' 만들 수 있음
+	touch 파일명/test.txt 
+
+mkdir test '폴더' 만들기
+
+rm 파일 삭제 (rm -r 디렉토리 삭제)
+	rm은 복구 안되니 주의(휴지통 없음)
+
+*.확장자   ex." *.txt " 모든 txt 파일
+	그냥 *이라고 하면 모든 파일을 의미하기 때문에 주의
+
+code .     현재위치에서  VS열기
+

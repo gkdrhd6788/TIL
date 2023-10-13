@@ -1,0 +1,41 @@
+
+Repository default branch를 master로 바꾸기
+
+커밋이 한번도 안된 경우에만 git remote add 가능
+	(repo만들때)add a readme하면 자동 커밋되므로 하지 말것(if 했다면 clone해야함)
+
+
+각 Repository마다 Settings가 있음 
+	Repo 지우는 방법 Danger zone에 있음
+
+
+
+강의장(push) - 집(clone) - 강의장(pull)	
+
+주의!! 수정하기전에 서버에 있는 걸 pull 
+
+주의!!
+처음에 git시작할 때
+1. README.md 2. gitignore생성 (.gitignore)
+
+.gitignore 파일에 추적원치 않는파일 이름 작성, 폴더면 폴더명/
+
+주의!! git add전에 gitignore파일에 먼저 이름 작성해야함
+(즉, 이미 git의 관리를 받은 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용되지 않음)
+
+gitignore목록을 만들어주는 사이트
+	toptal.com
+
+Github Profile 꾸미기
+github username으로 Github Repository만들기
+Add a README file 체크
+-->https://github.com/내유저네임 치면 나옴
+꾸밀 수도 있다.
+
+?clone할 때
+git clone url /TIL.git   현재 폴더에 어쩌구저쩌구 
+git clone url /TIL.git .  뭐가 다르다네..
+
+주의!!
+gitLab (ssafy) 쓸 때 1. Project URL에 아이디 선택 2. READEME 선택 제외
+
