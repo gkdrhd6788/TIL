@@ -1,3 +1,11 @@
+
+
+* ```python
+  # 시간 줄이기
+  import sys
+  input = sys.stdin.readline
+  ```
+
 def 함수():
 
 ​	return 꼭 할 필요x
